@@ -13,6 +13,11 @@
 		DB5F92851AF79158002C0393 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB5F92841AF79158002C0393 /* Images.xcassets */; };
 		DB5F92881AF79158002C0393 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5F92861AF79158002C0393 /* LaunchScreen.xib */; };
 		DB5F92941AF79158002C0393 /* SideMenuFromGitHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5F92931AF79158002C0393 /* SideMenuFromGitHubTests.swift */; };
+		DB5F929E1AF7918E002C0393 /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5F929D1AF7918E002C0393 /* SlideMenuController.swift */; };
+		DB8E0F681AF83C0B004D0950 /* RightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8E0F671AF83C0B004D0950 /* RightViewController.swift */; };
+		DBEF2C811AF8CB0300AB31E0 /* LeftTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEF2C801AF8CB0300AB31E0 /* LeftTableViewController.swift */; };
+		DBEF2C831AF8D02000AB31E0 /* UserInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEF2C821AF8D02000AB31E0 /* UserInfoTableViewCell.swift */; };
+		DBEF2C851AF8D03300AB31E0 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEF2C841AF8D03300AB31E0 /* MenuTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,11 @@
 		DB5F928D1AF79158002C0393 /* SideMenuFromGitHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SideMenuFromGitHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB5F92921AF79158002C0393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB5F92931AF79158002C0393 /* SideMenuFromGitHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuFromGitHubTests.swift; sourceTree = "<group>"; };
+		DB5F929D1AF7918E002C0393 /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideMenuController.swift; path = ../SlideMenuController.swift; sourceTree = "<group>"; };
+		DB8E0F671AF83C0B004D0950 /* RightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightViewController.swift; sourceTree = "<group>"; };
+		DBEF2C801AF8CB0300AB31E0 /* LeftTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftTableViewController.swift; sourceTree = "<group>"; };
+		DBEF2C821AF8D02000AB31E0 /* UserInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoTableViewCell.swift; sourceTree = "<group>"; };
+		DBEF2C841AF8D03300AB31E0 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +87,10 @@
 		DB5F927A1AF79158002C0393 /* SideMenuFromGitHub */ = {
 			isa = PBXGroup;
 			children = (
+				DB8E0F691AF83C1A004D0950 /* Source */,
 				DB5F927D1AF79158002C0393 /* AppDelegate.swift */,
-				DB5F927F1AF79158002C0393 /* ViewController.swift */,
+				DB8E0F6A1AF83C45004D0950 /* ViewController */,
+				DBEF2C861AF8D03900AB31E0 /* TableViewCell */,
 				DB5F92811AF79158002C0393 /* Main.storyboard */,
 				DB5F92841AF79158002C0393 /* Images.xcassets */,
 				DB5F92861AF79158002C0393 /* LaunchScreen.xib */,
@@ -110,6 +122,33 @@
 				DB5F92921AF79158002C0393 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DB8E0F691AF83C1A004D0950 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DB5F929D1AF7918E002C0393 /* SlideMenuController.swift */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		DB8E0F6A1AF83C45004D0950 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DB5F927F1AF79158002C0393 /* ViewController.swift */,
+				DB8E0F671AF83C0B004D0950 /* RightViewController.swift */,
+				DBEF2C801AF8CB0300AB31E0 /* LeftTableViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		DBEF2C861AF8D03900AB31E0 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DBEF2C821AF8D02000AB31E0 /* UserInfoTableViewCell.swift */,
+				DBEF2C841AF8D03300AB31E0 /* MenuTableViewCell.swift */,
+			);
+			name = TableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +251,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBEF2C831AF8D02000AB31E0 /* UserInfoTableViewCell.swift in Sources */,
+				DBEF2C811AF8CB0300AB31E0 /* LeftTableViewController.swift in Sources */,
+				DBEF2C851AF8D03300AB31E0 /* MenuTableViewCell.swift in Sources */,
 				DB5F92801AF79158002C0393 /* ViewController.swift in Sources */,
+				DB8E0F681AF83C0B004D0950 /* RightViewController.swift in Sources */,
+				DB5F929E1AF7918E002C0393 /* SlideMenuController.swift in Sources */,
 				DB5F927E1AF79158002C0393 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +453,7 @@
 				DB5F92991AF79158002C0393 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB5F929A1AF79158002C0393 /* Build configuration list for PBXNativeTarget "SideMenuFromGitHubTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +462,7 @@
 				DB5F929C1AF79158002C0393 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

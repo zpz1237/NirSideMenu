@@ -15,7 +15,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        var storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        
+        // create viewController code...
+        let leftViewController = storyBoard.instantiateViewControllerWithIdentifier("LeftTableViewController") as! LeftTableViewController
+        
+        let rightViewController = storyBoard.instantiateViewControllerWithIdentifier("RightViewController") as! RightViewController
+        
+        let mainViewController = storyBoard.instantiateViewControllerWithIdentifier("MainViewController") as! ViewController
+        
+        let nvc = UINavigationController(rootViewController: mainViewController)
+        
+        let slideMenuController = SlideMenuController(mainViewController: nvc, leftMenuViewController: leftViewController, rightMenuViewController: rightViewController)
+        
+        mainViewController.addLeftBarButtonWithImage(UIImage(named: "ic_menu_black_24dp")!)
+    mainViewController.addRightBarButtonWithImage(UIImage(named:"ic_notifications_black_24dp")!)
+        
+        self.window?.rootViewController = slideMenuController
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 
