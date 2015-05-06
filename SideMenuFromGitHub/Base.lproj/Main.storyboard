@@ -2,13 +2,14 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E11f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JSx-gT-UsP">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--User Info View Controller-->
         <scene sceneID="6ui-5y-xte">
             <objects>
-                <viewController id="4aB-Me-ScR" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserInfoViewController" id="4aB-Me-ScR" customClass="UserInfoViewController" customModule="SideMenuFromGitHub" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="d9t-MG-NZb"/>
                         <viewControllerLayoutGuide type="bottom" id="Yw8-HT-Sh0"/>
@@ -24,7 +25,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="asr-Z2-asQ" secondAttribute="centerX" id="6lO-6X-b3U"/>
                             <constraint firstAttribute="centerY" secondItem="asr-Z2-asQ" secondAttribute="centerY" id="xTC-r2-TIS"/>
@@ -53,10 +54,10 @@
             </objects>
             <point key="canvasLocation" x="-552" y="2073"/>
         </scene>
-        <!--View Controller-->
+        <!--Contents One View Controller-->
         <scene sceneID="5LR-HG-v29">
             <objects>
-                <viewController id="shU-aQ-sDu" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContentsOneViewController" id="shU-aQ-sDu" customClass="ContentsOneViewController" customModule="SideMenuFromGitHub" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ixw-lz-47W"/>
                         <viewControllerLayoutGuide type="bottom" id="CbN-A0-Xdu"/>
@@ -72,7 +73,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="mDj-Ff-sRx" secondAttribute="centerX" id="mKh-EU-GA2"/>
                             <constraint firstAttribute="centerY" secondItem="mDj-Ff-sRx" secondAttribute="centerY" id="pnE-lH-veB"/>
@@ -101,10 +102,10 @@
             </objects>
             <point key="canvasLocation" x="90" y="2073"/>
         </scene>
-        <!--View Controller-->
+        <!--Contents Two View Controller-->
         <scene sceneID="5Wm-yt-53R">
             <objects>
-                <viewController id="NdH-56-VjA" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContentsTwoViewController" id="NdH-56-VjA" customClass="ContentsTwoViewController" customModule="SideMenuFromGitHub" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5vq-gz-Bvv"/>
                         <viewControllerLayoutGuide type="bottom" id="oNr-RY-o4s"/>
@@ -120,7 +121,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="RUR-bg-RYN" secondAttribute="centerY" id="MuT-wB-TxN"/>
                             <constraint firstAttribute="centerX" secondItem="RUR-bg-RYN" secondAttribute="centerX" id="TZS-ME-Y27"/>
@@ -149,15 +150,16 @@
             </objects>
             <point key="canvasLocation" x="729" y="2073"/>
         </scene>
-        <!--View Controller-->
+        <!--Contents Three View Controller-->
         <scene sceneID="9j1-UD-kUE">
             <objects>
-                <viewController id="Db4-6Y-rr4" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContentsThreeViewController" id="Db4-6Y-rr4" customClass="ContentsThreeViewController" customModule="SideMenuFromGitHub" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vlu-WT-zsZ"/>
                         <viewControllerLayoutGuide type="bottom" id="mQj-hw-dkW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aL0-vT-iQq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Three" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSB-Us-3WX">
@@ -167,7 +169,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="kSB-Us-3WX" secondAttribute="centerY" id="7xD-kt-jTV"/>
                             <constraint firstAttribute="centerX" secondItem="kSB-Us-3WX" secondAttribute="centerX" id="A8s-D9-gX4"/>
@@ -196,15 +198,16 @@
             </objects>
             <point key="canvasLocation" x="1366.5" y="2072"/>
         </scene>
-        <!--View Controller-->
+        <!--Contents Four View Controller-->
         <scene sceneID="JdC-BA-twT">
             <objects>
-                <viewController id="bPW-IE-nsv" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContentsFourViewController" id="bPW-IE-nsv" customClass="ContentsFourViewController" customModule="SideMenuFromGitHub" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="i88-x6-Wj0"/>
                         <viewControllerLayoutGuide type="bottom" id="XVC-GP-fnN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rc9-4w-04P">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Four" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hM0-O7-2IP">
@@ -214,7 +217,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="hM0-O7-2IP" secondAttribute="centerY" id="HRT-8M-UT4"/>
                             <constraint firstAttribute="centerX" secondItem="hM0-O7-2IP" secondAttribute="centerX" id="I70-n2-YUi"/>
@@ -334,14 +337,14 @@
                                             <exclude reference="K0w-pe-xPx"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <exclude reference="Gzq-Ts-oH8"/>
-                                            <exclude reference="nfm-QD-AKC"/>
-                                            <exclude reference="v6u-wZ-vYR"/>
-                                            <exclude reference="wIH-QP-AGi"/>
                                             <exclude reference="OcU-Tr-3oz"/>
                                             <exclude reference="Vfr-dQ-fbv"/>
+                                            <exclude reference="v6u-wZ-vYR"/>
+                                            <exclude reference="wIH-QP-AGi"/>
                                             <exclude reference="8j9-Wf-BKS"/>
                                             <exclude reference="dvR-gV-FSz"/>
+                                            <exclude reference="Gzq-Ts-oH8"/>
+                                            <exclude reference="nfm-QD-AKC"/>
                                         </mask>
                                     </variation>
                                     <variation key="widthClass=compact">
@@ -352,14 +355,14 @@
                                             <include reference="K0w-pe-xPx"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <include reference="Gzq-Ts-oH8"/>
-                                            <include reference="nfm-QD-AKC"/>
-                                            <include reference="v6u-wZ-vYR"/>
-                                            <include reference="wIH-QP-AGi"/>
                                             <include reference="OcU-Tr-3oz"/>
                                             <include reference="Vfr-dQ-fbv"/>
+                                            <include reference="v6u-wZ-vYR"/>
+                                            <include reference="wIH-QP-AGi"/>
                                             <include reference="8j9-Wf-BKS"/>
                                             <include reference="dvR-gV-FSz"/>
+                                            <include reference="Gzq-Ts-oH8"/>
+                                            <include reference="nfm-QD-AKC"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
@@ -416,10 +419,10 @@
                                             <exclude reference="d99-DM-QSe"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <exclude reference="LcP-B7-mAT"/>
-                                            <exclude reference="zUt-De-jpE"/>
                                             <exclude reference="3QD-gM-gZM"/>
                                             <exclude reference="jAi-0a-hUf"/>
+                                            <exclude reference="LcP-B7-mAT"/>
+                                            <exclude reference="zUt-De-jpE"/>
                                         </mask>
                                     </variation>
                                     <variation key="widthClass=compact">
@@ -428,10 +431,10 @@
                                             <include reference="d99-DM-QSe"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <include reference="LcP-B7-mAT"/>
-                                            <include reference="zUt-De-jpE"/>
                                             <include reference="3QD-gM-gZM"/>
                                             <include reference="jAi-0a-hUf"/>
+                                            <include reference="LcP-B7-mAT"/>
+                                            <include reference="zUt-De-jpE"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>

@@ -13,7 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         var storyBoard = UIStoryboard(name: "Main", bundle: nil)
@@ -23,14 +22,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let rightViewController = storyBoard.instantiateViewControllerWithIdentifier("RightViewController") as! RightViewController
         
-        let mainViewController = storyBoard.instantiateViewControllerWithIdentifier("MainViewController") as! ViewController
+        let mainViewController = storyBoard.instantiateViewControllerWithIdentifier("ContentsOneViewController") as! ContentsOneViewController
         
         let nvc = UINavigationController(rootViewController: mainViewController)
         
         let slideMenuController = SlideMenuController(mainViewController: nvc, leftMenuViewController: leftViewController, rightMenuViewController: rightViewController)
         
         mainViewController.addLeftBarButtonWithImage(UIImage(named: "ic_menu_black_24dp")!)
-    mainViewController.addRightBarButtonWithImage(UIImage(named:"ic_notifications_black_24dp")!)
+        mainViewController.addRightBarButtonWithImage(UIImage(named:"ic_notifications_black_24dp")!)
         
         self.window?.rootViewController = slideMenuController
         self.window?.makeKeyAndVisible()

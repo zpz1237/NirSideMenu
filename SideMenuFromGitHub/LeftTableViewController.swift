@@ -12,10 +12,45 @@ class LeftTableViewController: UITableViewController {
 
     var dataSource = [String]()
     
+    var LeftStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    
+    var userInfoViewControllerNV: UINavigationController?
+    var contentsOneViewControllerNV: UINavigationController?
+    var contentsTwoViewControllerNV: UINavigationController?
+    var contentsThreeViewControllerNV: UINavigationController?
+    var contentsFourViewControllerNV: UINavigationController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         dataSource = ["UserInfo","One","Two","Three","Four"]
+        
+        var userInfoViewController = LeftStoryboard.instantiateViewControllerWithIdentifier("UserInfoViewController") as! UserInfoViewController
+        userInfoViewController.addLeftBarButtonWithImage(UIImage(named: "ic_menu_black_24dp")!)
+        userInfoViewController.addRightBarButtonWithImage(UIImage(named:"ic_notifications_black_24dp")!)
+        self.userInfoViewControllerNV = UINavigationController(rootViewController: userInfoViewController)
+        
+        var contentsOneViewController = LeftStoryboard.instantiateViewControllerWithIdentifier("ContentsOneViewController") as! ContentsOneViewController
+        contentsOneViewController.addLeftBarButtonWithImage(UIImage(named: "ic_menu_black_24dp")!)
+        contentsOneViewController.addRightBarButtonWithImage(UIImage(named:"ic_notifications_black_24dp")!)
+        self.contentsOneViewControllerNV = UINavigationController(rootViewController: contentsOneViewController)
+        
+        var contentsTwoViewController = LeftStoryboard.instantiateViewControllerWithIdentifier("ContentsTwoViewController") as! ContentsTwoViewController
+        contentsTwoViewController.addLeftBarButtonWithImage(UIImage(named: "ic_menu_black_24dp")!)
+        contentsTwoViewController.addRightBarButtonWithImage(UIImage(named:"ic_notifications_black_24dp")!)
+        self.contentsTwoViewControllerNV = UINavigationController(rootViewController: contentsTwoViewController)
+        
+        var contentsThreeViewController = LeftStoryboard.instantiateViewControllerWithIdentifier("ContentsThreeViewController") as! ContentsThreeViewController
+        contentsThreeViewController.addLeftBarButtonWithImage(UIImage(named: "ic_menu_black_24dp")!)
+        contentsThreeViewController.addRightBarButtonWithImage(UIImage(named:"ic_notifications_black_24dp")!)
+        self.contentsThreeViewControllerNV = UINavigationController(rootViewController: contentsThreeViewController)
+        
+        var contentsFourViewController = LeftStoryboard.instantiateViewControllerWithIdentifier("ContentsFourViewController") as! ContentsFourViewController
+        contentsFourViewController.addLeftBarButtonWithImage(UIImage(named: "ic_menu_black_24dp")!)
+        contentsFourViewController.addRightBarButtonWithImage(UIImage(named:"ic_notifications_black_24dp")!)
+        self.contentsFourViewControllerNV = UINavigationController(rootViewController: contentsFourViewController)
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -69,13 +104,33 @@ class LeftTableViewController: UITableViewController {
         if indexPath.row == 0 {
             return 140
         }
-        
+
         return 60
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        changViewController(indexPath.row)
+    }
     
-    
-    
+    func changViewController(row: Int) {
+        
+        switch row {
+        case 0:
+            self.slideMenuController()?.changeMainViewController(userInfoViewControllerNV!, close: true)
+        case 1:
+            self.slideMenuController()?.changeMainViewController(contentsOneViewControllerNV!, close: true)
+        case 2:
+            self.slideMenuController()?.changeMainViewController(contentsTwoViewControllerNV!, close: true)
+        case 3:
+            self.slideMenuController()?.changeMainViewController(contentsThreeViewControllerNV!, close: true)
+        case 4:
+            self.slideMenuController()?.changeMainViewController(contentsFourViewControllerNV!, close: true)
+        default:
+            break
+        }
+        
+    }
     
 
     /*
