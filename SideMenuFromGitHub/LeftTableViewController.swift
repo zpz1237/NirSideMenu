@@ -15,7 +15,7 @@ class LeftTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dataSource = ["UserInfo","One","Two"]
+        dataSource = ["UserInfo","One","Two","Three","Four"]
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -45,23 +45,37 @@ class LeftTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        if indexPath.row == 1 {
+        if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCellWithIdentifier("UserInfoTableViewCell", forIndexPath: indexPath) as! UserInfoTableViewCell
             
-            
+            //StoryBoard中已配置好
             
             return cell
             
         } else {
             let cell = tableView.dequeueReusableCellWithIdentifier("MenuTableViewCell", forIndexPath: indexPath) as! MenuTableViewCell
             
+            cell.MenuLabel.text = dataSource[indexPath.row]
             
-            
+            self.tableView.separatorStyle = .None
             
             return cell
         }
         
     }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    
+        if indexPath.row == 0 {
+            return 140
+        }
+        
+        return 60
+    }
+    
+    
+    
+    
     
 
     /*
