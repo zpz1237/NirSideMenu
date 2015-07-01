@@ -101,16 +101,18 @@ class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
     func initView() {
         mainContainerView = UIView(frame: self.view.bounds)
         mainContainerView.backgroundColor = UIColor.clearColor()
-        mainContainerView.autoresizingMask = UIViewAutoresizing.FlexibleHeight | UIViewAutoresizing.FlexibleWidth
+        
+
+        mainContainerView.autoresizingMask = UIViewAutoresizing(rawValue: UIViewAutoresizing.FlexibleHeight.rawValue | UIViewAutoresizing.FlexibleWidth.rawValue)
         self.view.insertSubview(mainContainerView, atIndex: 0)
 
         var opacityframe: CGRect = self.view.bounds
-        var opacityOffset: CGFloat = 0
+        let opacityOffset: CGFloat = 0
         opacityframe.origin.y = opacityframe.origin.y + opacityOffset
         opacityframe.size.height = opacityframe.size.height - opacityOffset
         opacityView = UIView(frame: opacityframe)
         opacityView.backgroundColor = UIColor.blackColor()
-        opacityView.autoresizingMask = UIViewAutoresizing.FlexibleHeight | UIViewAutoresizing.FlexibleWidth
+        opacityView.autoresizingMask = UIViewAutoresizing(rawValue: UIViewAutoresizing.FlexibleHeight.rawValue | UIViewAutoresizing.FlexibleWidth.rawValue)
         opacityView.layer.opacity = 0.0
         self.view.insertSubview(opacityView, atIndex: 1)
         
@@ -898,7 +900,7 @@ extension UIViewController {
     func addPriorityToMenuGesuture(targetScrollView: UIScrollView) {
         if let slideControlelr = self.slideMenuController() {
             let recognizers =  slideControlelr.view.gestureRecognizers
-            for recognizer in recognizers as! [UIGestureRecognizer] {
+            for recognizer in recognizers as [UIGestureRecognizer]! {
                 if recognizer is UIPanGestureRecognizer {
                     targetScrollView.panGestureRecognizer.requireGestureRecognizerToFail(recognizer)
                 }

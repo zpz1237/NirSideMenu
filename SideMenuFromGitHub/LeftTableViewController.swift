@@ -92,6 +92,7 @@ class LeftTableViewController: UITableViewController {
             
             cell.MenuLabel.text = dataSource[indexPath.row]
             
+            //隐藏tableView分割线
             self.tableView.separatorStyle = .None
             
             return cell
